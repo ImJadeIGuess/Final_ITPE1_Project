@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ONLINE SHOP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>
+      <img src="random.webp" alt="Logo" class="logo">
+      <span class="word random">Random</span>
+      <span class="word random">Play</span>
+    </h1>
+  <div class="notification-icon-container" onclick="toggleNotifications()">
+    <div class="notification-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" class="bell-icon" viewBox="0 0 16 16">
+        <path d="M8 16a2 2 0 0 0 1.985-1.75H6.015A2 2 0 0 0 8 16zm.628-13.192a1 1 0 0 0-1.256 0A5.002 5.002 0 0 0 3 7c0 1.098-.258 2.054-.757 2.857-.165.27-.243.59-.243.928 0 .7.46 1.308 1.125 1.422A2.994 2.994 0 0 0 5 11h6a2.994 2.994 0 0 0 .877-.793c.665-.114 1.125-.722 1.125-1.422 0-.338-.078-.658-.243-.928A4.99 4.99 0 0 0 8.628 2.808z"/>
+      </svg>
+    </div>
+    <div id="notification-dropdown" class="notification-dropdown">
+      <ul>
+        <li>News: New product launched!</li>
+        <li>News: Special discount available.</li>
+        <li>News: Upcoming site maintenance.</li>
+      </ul>
+    </div>
+  </div>
+    <nav>
+      <ul>
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#product">Products</a></li>
+        <li><a href="#Promotion">Promotion</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li class="social-links">
+          <a href="https://facebook.com" target="_blank">
+            <img src="facebook.png" alt="Facebook Logo" class="social-icon">
+          </a>
+          <a href="https://instagram.com" target="_blank">
+            <img src="instragram.jpg" alt="Instagram Logo" class="social-icon">
+          </a>
+          <a href="https://twitter.com" target="_blank">
+            <img src="twitter.jpg" alt="Twitter Logo" class="social-icon">
+          </a>
+        </li>
+        <li class="auth">
+          <a id="auth-button" href="login.html" class="login-link">Login</a>
+          <img id="userProfilePic" src="#" alt="User Profile" style="width:50px; height:50px; border-radius:50%; display:none;">
+        </li>
+      </ul>
+    </nav>
+    
+    <div class="theme-toggle">
+      <input type="checkbox" id="theme-toggle-checkbox">
+      <label for="theme-toggle-checkbox" class="theme-toggle-label">
+        <span class="sun-icon">🔅</span>
+        <span class="moon-icon">🌙</span>
+      </label>
+    </div>
+    <div class="music-player">
+      <button id="music-prev" class="music-prev-btn">⏮️</button>
+      <button id="music-play" class="music-play-btn">▶️</button>
+      <button id="music-next" class="music-next-btn">⏭️</button>
+      <select id="music-select" class="music-select"></select>
+      <div id="battery-info">Battery: --%</div>
+      <div id="battery-bar-container">
+      <div id="battery-bar"></div>
+      </div>
+ 
+
+    </header>
+
+
+  <section id="hero">
+    <div class="carousel-container">
+      <div class="carousel">
+        <div class="carousel-item" style="background-image: url('img1.png');">
+          <h2>Description</h2>
+          <p>Random Play is your go-to e-store for movie rentals and purchases. Enjoy timeless classics and the latest blockbusters.</p>
+        </div>
+        <div class="carousel-item" style="background-image: url('img2.webp');">
+          <h2>Description 2</h2>
+          <p>Explore our amazing collection of movies and TV shows at unbeatable prices.</p>
+        </div>
+        <div class="carousel-item" style="background-image: url('img3.webp');">
+          <h2>Description 3</h2>
+          <p>New releases every week! Don't miss out on the latest hits.</p>
+        </div>
+      </div>
+      <div class="carousel-nav">
+        <span class="carousel-prev">❮</span>
+        <span class="carousel-next">❯</span>
+      </div>
+      <div class="carousel-indicators">
+        <span class="indicator active"></span>
+        <span class="indicator"></span>
+        <span class="indicator"></span>
+      </div>
+    </div>
+  </section>
+ 
+
+
+  <section id="product">
+    
+    <video autoplay loop muted id="video-bg">
+      <source src="background product.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+
+    <div class="search-container">
+    <input type="text" id="search-bar" placeholder="Search products...">
+    <select id="genre-filter">
+      <option value="">All Genres</option>
+      <option value="most_bought">Most Bought</option>
+      <option value="Interview">Interview</option>
+      <option value="Action">Action</option>
+      <option value="Fantasy">Fantasy</option>
+      <option value="Comedy">Comedy</option>
+      <option value="Retro">Retro</option>
+      <option value="Thriller">Thriller</option>
+      <option value="Tragic">Tragic</option>
+      <option value="Romantic">Romantic</option>
+      <option value="Family">Family</option>
+    </select>
+    
+  </div>
+
+  <div class="product-grid" id="product-list">
+    
+    <div class="product" data-title="This is How I am" data-genre="Interview">
+      <img src="this is.webp" alt="This is How I am">
+      <h3>This is How I am: Interview</h3>
+      <p class="desc">
+        This program usually invites famous Hollow investigators and critics to discuss unusual events that occurred in the Hollows. It doesn't matter how reliable what they are saying is. What matters is that the audience loves to listen to them.
+      </p>
+      <p class="product-price">$9.99</p>
+      <button class="add-to-cart" onclick="addToCart('This is How I am: Interview', 9.99)">🛒Add to Cart</button>
+    </div>
+    <div class="product" data-title="Starlight Knight" data-genre="Action">
+      <img src="starlight knight.webp" alt="Starlight Knight">
+      <h3>Starlight Knight: Action</h3>
+      <p class="desc">
+        After the meteor shower, it was no longer the peaceful city it once was. The appearance of evil monsters with unknown purposes plunged humanity into a great crisis. At this same time, the sworn enemy of the monsters, the Starlight Knights appeared! Only a few copies of the recording exist, containing an extra 10 seconds of unreleased scenes due to a production error.
+      </p>
+      <p class="product-price">$12.99</p>
+      <button class="add-to-cart" onclick="addToCart('Starlight Knight: Action', 12.99)">🛒Add to Cart</button>
+    </div>
+    <div class="product" data-title="Never Overtime" data-genre="Fantasy">
+      <img src="Never.webp" alt="Never Overtime">
+      <h3>Never Overtime: Fantasy</h3>
+      <p class="desc">
+        A nonsensical office worker finds himself employed at a cruel company known as Olympus. No matter what he does, he can never get off work on time. He decides it's time to fight back, and so together with the "Teambuilding Goddess Athena," "Overtime Fitness Nut Ares," and "Holder of Overnight Meetings Hermes," this office worker plans on starting a war. Their ultimate goal? Get off work on time.
+      </p>
+      <p class="product-price">$11.99</p>
+      <button class="add-to-cart" onclick="addToCart('Never Overtime: Fantasy', 11.99)">🛒Add to Cart</button>
+    </div>
+    <div class="product" data-title="More than one truth" data-genre="Comedy">
+      <img src="More than.webp" alt="More than one truth">
+      <h3>More than one truth: Comedy</h3>
+      <p class="desc">
+        A downtrodden detective sees the number of cases and success rate go up at the same time he adopts his friend's child. Every time he thinks he has determined the truth, he somehow loses consciousness. When he wakes up, the case has been solved, but the conclusion reached always seems quite different from what he had deduced...
+      </p>
+      <p class="product-price">$8.99</p>
+      <button class="add-to-cart" onclick="addToCart('More than one truth: Comedy', 8.99)">🛒Add to Cart</button>
+    </div>
+    <div class="product" data-title="Return to Giallo City" data-genre="Retro">
+      <img src="return.webp" alt="Return to Giallo City">
+      <h3>Return to Giallo City: Retro</h3>
+      <p class="desc">
+        A group of Hollow Raiders are commissioned to investigate a mysterious Hollow, unaware that it's a trap set by someone seeking vengeance. Within the fabricated Hollow, the Raiders attack both family and friends who, to them, look like Ethereals. This is how they will atone for their crimes.
+      </p>
+      <p class="product-price">$9.99</p>
+      <button class="add-to-cart" onclick="addToCart('Return to Giallo City: Retro', 9.99)">🛒Add to Cart</button>
+    </div>
+    <div class="product" data-title="The Port Peak" data-genre="Thriller">
+      <img src="the pork.webp" alt="The Port Peak">
+      <h3>The Port Peak: Thriller</h3>
+      <p class="desc">
+        A group of young people enters the forbidden Port Mountain. They are not alone. The robotic monster known as the "Lumberjack" lurks about the mountain.
+      </p>
+      <p class="product-price">$10.99</p>
+      <button class="add-to-cart" onclick="addToCart('The Port Peak: Thriller', 10.99)">🛒Add to Cart</button>
+    </div>
+    <div class="product" data-title="Unlimited Players" data-genre="Thriller">
+      <img src="unlimited.webp" alt="Unlimited Players">
+      <h3>Unlimited Players: Thriller</h3>
+      <p class="desc">
+        A group of gamers are invited to play a new VR game, only to discover that they are actually NPCs in the upper level of the game. When they try to fight back against the upper level, players there find out that they, too, are PCs in an upper level of the game... Unlike similar films, the storyline of "Unlimited Players" is not "the protagonist proves that he is not an NPC," instead being quite the opposite.
+      </p>
+      <p class="product-price">$12.99</p>
+      <button class="add-to-cart" onclick="addToCart('Unlimited Players: Thriller', 12.99)">🛒Add to Cart</button>
+    </div>
+    <div class="product" data-title="Final Punch" data-genre="Action">
+      <img src="final punch.webp" alt="Final Punch">
+      <h3>Final Punch: Action</h3>
+      <p class="desc">
+        An unfortunate couple is involved in a car accident, both becoming amputees. To encourage his girlfriend to come out of her depression, and cover their expensive medical bills, the man installs a pair of mechanical legs and signs himself up for an underground boxing tournament. Violent collisions between fists and the mechanical take place, and intense competitions full of action-packed fight scenes make the crowd go wild. The film only spends a little bit of time on its portrayal of love. Still, when this iron man who reigns in the ring reveals a tenderness to only his love, this simple and short scene is a pearl in the movie.
+      </p>
+      <p class="product-price">$9.99</p>
+      <button class="add-to-cart" onclick="addToCart('Final Punch: Action', 9.99)">🛒Add to Cart</button>
+    </div>
+    <div class="product" data-title="Black Tales" data-genre="Tragic">
+      <img src="black tales.webp" alt="Black Tales">
+      <h3>Black Tales: Tragic</h3>
+      <p class="desc">
+        A stage play pulled together from several popular fairy tales, characterized by its dark atmosphere and plot development. One night, all of the adults suddenly disappear and the entire world turns into paper. A little girl Gwen embarks on an adventure to find out where all the adults have gone.
+      </p>
+      <p class="product-price">$10.99</p>
+      <button class="add-to-cart" onclick="addToCart('Black Tales: Tragic', 10.99)">🛒Add to Cart</button>
+    </div>
+    <div class="product" data-title="Raiders of the Hollow" data-genre="Action">
+      <img src="raider.webp" alt="Raiders of the Hollow">
+      <h3>Raiders of the Hollow</h3>
+      <p class="desc">
+        A former top Hollow investigator is down on his luck when he happens to get wrapped up in an adventure into a Hollow to recover a lost, mysterious treasure from the old civilization period.
+      </p>
+      <p class="product-price">$11.99</p>
+      <button class="add-to-cart" onclick="addToCart('Raiders of the Hollow', 11.99)">🛒Add to Cart</button>
+    </div>
+    <div class="product" data-title="Tre-Carls" data-genre="Family">
+      <img src="Trecarls.webp" alt="Tre-Carls">
+      <h3>Tre-Carls: Family</h3>
+      <p class="desc">
+        Portrays the life of the Carl family. Depicting the joys and sorrows of their life, from starting out in society to becoming a parent, from the birth of their child to that child entering school... Everything seems ordinary and trivial but also wholesome and touching... Oh, and there's Bangboo. A unique sitcom featuring an all-Bangboo cast. The production team specially customized different sizes so that the Carl family look a little "older" each season. Its unique and funny style has attracted a large audience, particularly with children.
+      </p>
+      <p class="product-price">$8.99</p>
+      <button class="add-to-cart" onclick="addToCart('Tre-Carls: Family', 8.99)">🛒Add to Cart</button>
+    </div>
+    <div class="product" data-title="Last Flight" data-genre="Tragic">
+      <img src="Last Flight.webp" alt="Last Flight">
+      <h3>Last Flight: Tragic</h3>
+      <p class="desc">
+        A film inspired by images from the old civilization. Joseph, a stunt pilot, decides to perform a highly risky stunt to prove his love to his fiancee, Irenda, but tragically loses his life in an accident. Discovering that her engagement ring allows her to return to the morning of the accident, Renda attempts to go back in time to prevent the tragedy. Despite her efforts, an unseen force consistently leads Joseph to his death. To her horror, with every return to the past, the moment of Irenda's arrival is delayed by a fraction, diminishing her chances to change their fate.
+      </p>
+      <p class="product-price">$9.99</p>
+      <button class="add-to-cart" onclick="addToCart('Last Flight: Tragic', 9.99)">🛒Add to Cart</button>
+    </div>
+    <div class="product" data-title="Oh Sweetie~" data-genre="Romantic">
+      <img src="oh sweetie.webp" alt="Oh Sweetie~">
+      <h3>Oh Sweetie~: Romantic</h3>
+      <p class="desc">
+        Tells the tale of a beautiful lady: Monica, who has lost her memory, and the various stories that unfold in a strange city. Bold performances and scenes made it quite popular.
+      </p>
+      <p class="product-price">$11.99</p>
+      <button class="add-to-cart" onclick="addToCart('Oh Sweetie~: Romantic', 11.99)">🛒Add to Cart</button>
+    </div>
+    <div class="product" data-title="Small Body, Big Crisis" data-genre="Comedy">
+      <img src="small body.webp" alt="Small Body, Big Crisis">
+      <h3>Small Body, Big Crisis: Comedy</h3>
+      <p class="desc">
+        One day, Bob woke up as an old Bangboo in a scrapyard. In order to return to his old body, he embarked upon a tumultuous journey.
+      </p>
+      <p class="product-price">$10.99</p>
+      <button class="add-to-cart" onclick="addToCart('Small Body, Big Crisis: Comedy', 10.99)">🛒Add to Cart</button>
+    </div>
+    <div class="product" data-title="Family" data-genre="Action">
+      <img src="Family.webp" alt="Family">
+      <h3>Family: Action</h3>
+      <p class="desc">
+        A Hollow investigator who's past his prime receives a message from the bank. The sender is his son. The only problem is that the army told him his son went missing in action years ago during an operation to suppress a Hollow. The old Hollow investigator decides it's time to uncover the truth.
+      </p>
+      <p class="product-price">$13.99</p>
+      <button class="add-to-cart" onclick="addToCart('Family: Action', 13.99)">🛒Add to Cart</button>
+    </div>
+    <div class="product" data-title="Attack on Cyberz" data-genre="Fantasy">
+      <img src="attack cyberz.webp" alt="Attack on Cyberz">
+      <h3>Attack on Cyberz: Fantasy</h3>
+      <p class="desc">
+        A mysterious, highly transmissible virus appears on the Internet. The first to be infected are the service robots in the city. As it spreads, every electronic device that can act on its own becomes infected. What's worse, the virus even spreads to Bangboo and Cyborgs. Those infected, known as Cyberz, are highly aggressive and out of control. To survive, people decide to escape from the city and resist the Cyberz.
+      </p>
+      <p class="product-price">$10.99</p>
+      <button class="add-to-cart" onclick="addToCart('Attack on Cyberz: Fantasy', 10.99)">🛒Add to Cart</button>
+    </div>
+    <div class="product" data-title="Coffee Mate" data-genre="Romantic">
+      <img src="coffee mate.webp" alt="Coffee Mate">
+      <h3>Coffee Mate: Romantic</h3>
+      <p class="desc">
+        In the time it takes to enjoy just one cup of coffee, beautiful customer Angelina and a coffee machine named Mr. Rob fall in love. This is ...no more than an ordinary love story. A very successful small-budget film. All the scenes that appear in the film happen right in the coffee shop. Excellent camera work and a variety of clever situations in the store make for an interesting viewing experience that's not at all fatiguing for the audience.
+      </p>
+      <p class="product-price">$10.99</p>
+      <button class="add-to-cart" onclick="addToCart('Coffee Mate: Romantic', 10.99)">🛒Add to Cart</button>
+    </div>
+    <div class="product" data-title="The Big Hollow" data-genre="Thriller">
+      <img src="the big hollow.webp" alt="The Big Hollow">
+      <h3>The Big Hollow: Thriller</h3>
+      <p class="desc">
+        An intern Hollow investigator from one of the survivor cities encounters a massive crisis on the very first day at work. An enormous Hollow suddenly expands and is predicted to engulf the entire city.
+      </p>
+      <p class="product-price">$11.99</p>
+      <button class="add-to-cart" onclick="addToCart('The Big Hollow: Thriller', 11.99)">🛒Add to Cart</button>
+    </div>
+    <div class="product" data-title="The Heartbeat" data-genre="Family">
+      <img src="the heartbeat.webp" alt="The Heartbeat">
+      <h3>The Heartbeat: Family</h3>
+      <p class="desc">
+        A child with congenital heart disease falls into a Hollow. His mother disregards the advice of a Hollow investigator and forces her way into the Hollow to save her child. Her only lead on her son's location is an app on her phone that monitors his heart. She follows every simulated heartbeat as she tracks him down.
+      </p>
+      <p class="product-price">$8.99</p>
+      <button class="add-to-cart" onclick="addToCart('The Heartbeat: Family', 8.99)">🛒Add to Cart</button>
+    </div>
+    <div class="product" data-title="Nihility" data-genre="Retro">
+      <img src="Nihility.webp" alt="Nihility">
+      <h3>Nihility: Retro</h3>
+      <p class="desc">
+        A fictional work based on images from the old civilization period. A scientist uncovers the possibility of a coming Hollow disaster and attempts to avert the disaster on his own after his warnings fall on deaf ears. He ultimately proves too weak to stop the disaster...
+      </p>
+      <p class="product-price">$9.99</p>
+      <button class="add-to-cart" onclick="addToCart('Nihility: Retro', 9.99)">🛒Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="Promotion">
+  <div class="promo-container">
+    <h2>Promotion Code</h2>
+    <div class="promo-input">
+      <input type="text" id="promo-code" placeholder="Enter your promo code">
+      <button onclick="applyPromo()">Apply Code</button>
+    </div>
+    <p id="promo-message"></p>
+  </div>
+</section>
+
+  <section id="faq">
+    <div class="faq-container">
+      <h2>Frequently Asked Questions</h2>
+  
+      <div class="faq-item">
+        <h3 class="faq-question">How do I purchase a product?</h3>
+        <div class="faq-answer">
+          <p>You can purchase a product by adding it to your cart and proceeding to checkout. The payment page will guide you through the rest of the process.</p>
+        </div>
+      </div>
+  
+      <div class="faq-item">
+        <h3 class="faq-question">What payment methods do you accept?</h3>
+        <div class="faq-answer">
+          <p>We accept credit cards, PayPal, and even cryptocurrency for a secure and flexible payment experience.</p>
+        </div>
+      </div>
+  
+      <div class="faq-item">
+        <h3 class="faq-question">How can I apply a promo code?</h3>
+        <div class="faq-answer">
+          <p>You can enter a valid promo code in the Promotion Code section on our main page. The discount will instantly apply to all product prices.</p>
+        </div>
+      </div>
+  
+      <div class="faq-item">
+        <h3 class="faq-question">Do you offer international shipping?</h3>
+        <div class="faq-answer">
+          <p>Yes, we ship worldwide. Shipping fees and times vary by destination.</p>
+        </div>
+      </div>
+  
+      <div class="faq-item">
+        <h3 class="faq-question">What is your return policy?</h3>
+        <div class="faq-answer">
+          <p>We offer a 30-day return policy on most products. Please check the specific product page for any exclusions.</p>
+        </div>
+      </div>
+  
+      <div class="faq-item">
+        <h3 class="faq-question">How do I contact customer support?</h3>
+        <div class="faq-answer">
+          <p>You can reach our customer support via the "Contact Us" page, or directly by emailing change@gmail.com</p>
+        </div>
+      </div>
+  
+      <div class="faq-item">
+        <h3 class="faq-question">Is my personal information secure?</h3>
+        <div class="faq-answer">
+          <p>Absolutely. We use industry-standard security measures to protect your data and ensure a safe shopping experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="reviews-link">
+    <div class="reviews-link-container">
+      <a href="review.html" class="review-btn">Read Reviews</a>
+    </div>
+  </section>  
+  </section>
+  
+
+<section id="about-us-main" class="about-main-section">
+  <div class="about-main-content">
+    <h2>About Us</h2>
+    <p>Learn about our creative journey and what drives us to deliver amazing experiences.</p>
+    <a href="about.html" class="about-main-link">Discover More</a>
+  </div>
+</section>
+
+
+<div class="isekai-agreement">
+  <h2>The Gateway Beckons</h2>
+  <p>Beyond this portal lies a world unseen, a realm of boundless wonders and trials unknown.</p>
+  <p>By stepping forth, you accept the sacred pact, binding yourself to the laws of this enchanted domain.</p>
+  <p>Know this: once the journey begins, there is no return to the mundane as you once knew it.</p>
+  <p>The ancients whisper that those who respect the balance of this world shall find prosperity, while those who defy its harmony shall fade into oblivion.</p>
+  <p>Time flows differently here; choices forge destinies, and words hold the power to shape legends.</p>
+  <p>Do not tread lightly, for even the smallest act may ripple through the cosmos like a starborn prophecy.</p>
+  <p>Magic binds this realm together, and only those who walk with wisdom may wield its light.</p>
+  <p>To doubt the path is to invite chaos; to accept it is to embrace the dawn of a new legend—your legend.</p>
+  <p>Should you choose to step forward, the gates shall recognize your spirit, and the journey shall commence.</p>
+  <a href="user.html" class="isekai-btn">Accept the Summoning</a>
+</div>
+
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-section about">
+      <h3>About Random Play</h3>
+      <p>
+        Random Play is your one-stop online shop for movies and entertainment. We deliver a unique experience that combines quality content with a dynamic online shopping experience.
+      </p>
+    </div>
+    
+    <div class="footer-section links">
+      <h3>Links</h3>
+      <ul>
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#product">Products</a></li>
+        <li><a href="#Promotion">Promotion</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="help.html">Help Center / Support</a></li>
+        <li><a href="feed.html">Feedback / Suggestions</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-section contact">
+      <h3>Contact Us</h3>
+      <a href="mailto:changediggie@gmail.com" class="email-link">Contact Us</a>
+      <p><a href="tel:+639566396110" class="phone-link">0956 639 6110</a></p>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>
+      <a href="private.html" class="privacy-link">Privacy Policy</a> | 
+      <a href="parental.html" class="parental-link">Parental Policy</a> | 
+      <a href="terms.html" class="terms-link">Terms of Service</a> | 
+      &copy; 2025 Random Play. All rights reserved.
+    </p>
+  </div>
+</footer>
+  <script src="script.js"></script>
+</body>
+</html>

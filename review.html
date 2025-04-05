@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reviews - Random Play</title>
+  <link rel="stylesheet" href="review.css">
+</head>
+<body>
+
+  <div class="video-background">
+    <video autoplay loop muted>
+      <source src="Anime2.mp4" type="video/mp4">
+    </video>
+  </div>
+
+
+  <header>
+    <h1>Customer Reviews</h1>
+    <nav>
+      <a href="main.html" class="back-link">← Back to Home</a>
+    </nav>
+    <div class="music-player">
+      <button id="music-play" class="music-play-btn">▶️</button>
+      <audio id="music-player" src="Reviews Music.mp3" preload="auto"></audio>
+    </div>
+  </header>
+
+
+  <section class="reviews-section">
+    <div class="reviews-container" id="reviews-container">
+    </div>
+  </section>
+
+  <script src="review.js"></script>
+</body>
+</html>

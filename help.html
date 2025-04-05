@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help Center / Support</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="help.css">
+</head>
+<body>
+
+  <video autoplay muted loop id="bg-video">
+    <source src="Trinity.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+ 
+  <div class="main-container">
+    <header class="page-header">
+      <h1>Help Center &amp; Support</h1>
+    </header>
+
+
+    <section class="support-articles">
+      <h2>Support Articles</h2>
+      <div class="article-list">
+        <a class="support-article" href="reset.html">
+          <h3>How to Reset Your Password</h3>
+          <p>Learn the steps to recover and reset your password securely.</p>
+        </a>
+        <a class="support-article" href="2fa.html">
+          <h3>Setting Up Two-Factor Authentication</h3>
+          <p>Enhance your account security by enabling 2FA.</p>
+        </a>
+        <a class="support-article" href="troubleshoot.html">
+          <h3>Troubleshooting Login Issues</h3>
+          <p>Find common solutions to login problems and account access.</p>
+        </a>
+      </div>
+    </section>
+
+
+    <section class="live-chat-contact">
+      <div class="live-chat">
+        <h2>Live Chat Support</h2>
+        <p>Chat with our support team for immediate assistance.</p>
+        <div class="chat-box">
+          <p class="chat-message">Welcome! How can we help you today?</p>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form id="supportForm">
+          <input type="text" id="name" placeholder="Your Name" required>
+          <input type="email" id="email" placeholder="Your Email" required>
+          <textarea id="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="back-to-main">
+      <button id="back-btn" onclick="redirectToMain()">Back to Main</button>
+    </section>
+
+    <div class="music-player">
+      <button id="music-btn" onclick="toggleMusic()">&#9658; Play Music</button>
+    </div>
+  </div>
+
+  <script src="help.js"></script>
+</body>
+</html>

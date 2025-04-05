@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment</title>
+  <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+  <div class="payment-container">
+    <h2>Checkout</h2>
+    
+    <div class="cart-summary">
+      <button id="back-to-products" class="back-btn">Back to Products</button>
+      <h3>Order Summary</h3>
+      <ul id="cart-items"></ul>
+      <p>Total: $<span id="total-price">0.00</span></p>
+    </div>
+
+
+    <div class="payment-options">
+      <h3>Select Payment Method</h3>
+      <div class="payment-methods">
+        <label class="payment-option">
+          <input type="radio" name="payment" value="card" checked>
+          <img src="CARD.png" alt="Debit/Credit Card Logo">
+          <span>Debit/Credit Card</span>
+        </label>
+        <label class="payment-option">
+          <input type="radio" name="payment" value="gcash">
+          <img src="GCASH.png" alt="GCASH Logo">
+          <span>GCASH</span>
+        </label>
+        <label class="payment-option">
+          <input type="radio" name="payment" value="paypal">
+          <img src="PAYPAL.jpg" alt="PAYPAL Logo">
+          <span>PAYPAL</span>
+        </label>
+        <label class="payment-option">
+          <input type="radio" name="payment" value="paymaya">
+          <img src="PAYMAYA.png" alt="PAYMAYA Logo">
+          <span>PAYMAYA</span>
+        </label>
+      </div>
+    </div>
+
+    <button class="checkout-btn" onclick="processPayment()">Proceed to Pay</button>
+    <button class="cancel-btn" onclick="cancelPayment()">Cancel Payment</button>
+  </div>
+
+  <script src="payment.js"></script>
+</body>
+</html>

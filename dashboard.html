@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard/Analytics</title>
+  <link rel="stylesheet" href="dashboard.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <video id="video-bg" autoplay loop muted playsinline>
+    <source src="Talentless.mp4" type="video/mp4">
+  </video>
+  
+  <div class="dashboard-container">
+
+    <h1>Dashboard/Analytics</h1>
+    
+
+    <div class="scroller">
+      <h2>General Statistics</h2>
+      <div class="stats">
+        <p>Total Users: 1,234</p>
+        <p>Total Sales: $56,789</p>
+        <p>Active Sessions: 98</p>
+        <p>Revenue Growth: 12% MoM</p>
+      </div>
+      
+     
+      <div class="graphs">
+        <canvas id="graph1"></canvas>
+        <canvas id="graph2"></canvas>
+        <canvas id="graph3"></canvas>
+        <canvas id="graph4"></canvas>
+        <canvas id="graph5"></canvas>
+        <canvas id="graph6"></canvas>
+      </div>
+    </div>
+
+    
+    <button class="back-button" onclick="goBack()">Retrace Your Footprints</button>
+
+  
+    <button class="music-button" onclick="toggleMusic()">🎵</button>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
