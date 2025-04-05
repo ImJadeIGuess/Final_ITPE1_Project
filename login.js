@@ -22,7 +22,7 @@ document.getElementById("login-form").addEventListener("submit", function(e) {
     if(username === storedUser.fullName && password === storedUser.password) {
       localStorage.setItem("isLoggedIn", "true");
       localStorage.setItem("username", username);
-      window.location.href = "main.html"; 
+      window.location.href = "index.html"; 
     } else {
       alert("Incorrect username or password!");
     }
