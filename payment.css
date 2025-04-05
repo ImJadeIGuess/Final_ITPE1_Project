@@ -1,0 +1,186 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #02467e, #87ceeb, #ffffff); /* Deep Blue to Sky Blue */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.payment-options {
+   margin: 20px 0;
+    text-align: left;
+    background: linear-gradient(135deg, #00ffc8, #a600ff);
+    padding: 15px;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0 0 15px #ff00ff, 0 0 30px #00ffff;
+    border: 2px solid #ffea00; 
+}
+.cart-summary {
+
+    background: linear-gradient(135deg, #00ffc8, #a600ff);
+    padding: 15px;
+    border-radius: 5px;
+    text-align: left;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px #ffcc00, 0 0 30px #ffcc00;
+    border: 2px solid #ffcc00; 
+}
+
+.cart-summary h3 {
+    color: #48ff00; 
+    text-shadow: 0 0 8px #00ff00;
+    font-size: 22px;
+}
+
+.cart-summary ul li {
+    color: #00ff80;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.total-text {
+    font-size: 20px;
+    color: #00ffea;
+    text-shadow: 0 0 8px #00ffea, 0 0 16px #00ffea;
+    font-weight: bold;
+}
+
+.payment-container h2{
+    color: #00ff0d;
+    text-shadow: 0 0 8px #00ff55;
+    margin-bottom: 15px;
+}
+.payment-options h3 {
+    color: #00ff0d;
+    text-shadow: 0 0 8px #00ff55;
+    margin-bottom: 15px;
+}
+
+
+
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color:#0004ff;
+}
+.payment-option {
+    display: flex;
+    align-items: center;
+    background: #02467e;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    border: 2px solid transparent;
+}
+
+.payment-option:hover {
+    background: #0004ff;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #03e9f4;
+}
+
+.payment-option input[type="radio"] {
+    margin-right: 8px;
+}
+
+.payment-option img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    object-fit: contain;
+}
+
+.payment-option span {
+    font-size: 18px;
+    color: #fff;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+
+.checkout-btn {
+    background: linear-gradient(90deg, #00ff15, #00ff00, #00ff9d);
+    color: #222;
+    padding: 12px 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1;
+    text-shadow: 1px 1px 2px #fff;
+    box-shadow: 0 0 15px #00ff9d, 0 0 25px #00ff15;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.checkout-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px #00ff55, 0 0 35px #00ff00;
+}
+
+
+.cancel-btn {
+    background: #ff0000;
+    padding: 12px 15px;
+    border: 2px solid #ff5555; 
+    color: #ffffff; 
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    flex: 1;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+}
+
+.cancel-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff0000, 0 0 30px #ff4444;
+}
+
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(-20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+
+@keyframes neonGlow {
+    0%   { text-shadow: 0 0 10px #ff00cc; }
+    100% { text-shadow: 0 0 20px #ff00cc, 0 0 40px #ff00cc; }
+}
+.back-btn {
+    background: linear-gradient(90deg, #ffd700, #ffea00, #ffcc00); 
+    color: #222;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-shadow: 1px 1px 2px #fff;
+    box-shadow: 0 0 15px #ffea00, 0 0 25px #ffd700;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.back-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px #ffcc00, 0 0 35px #ffea00;
+}
