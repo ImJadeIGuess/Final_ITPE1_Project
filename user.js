@@ -1,6 +1,6 @@
 const agreeBtn = document.getElementById('agree-btn');
 agreeBtn.addEventListener('click', function() {
-    window.location.href = "main.html";  
+    window.location.href = "index.html";  
 });
 
 
