@@ -30,13 +30,13 @@ document.getElementById("signup-form").addEventListener("submit", function(e) {
       const userData = { fullName, gmail, password, profilePic: profilePicURL };
       localStorage.setItem("userData", JSON.stringify(userData));
       localStorage.setItem("isLoggedIn", "true");
-      window.location.href = "main.html"; 
+      window.location.href = "index.html"; 
     };
     reader.readAsDataURL(profilePicInput.files[0]);
   } else {
     const userData = { fullName, gmail, password, profilePic: "" };
     localStorage.setItem("userData", JSON.stringify(userData));
     localStorage.setItem("isLoggedIn", "true");
-    window.location.href = "main.html"; 
+    window.location.href = "index.html"; 
   }
 });
