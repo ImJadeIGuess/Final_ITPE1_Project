@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
   
       alert("Your payment has been proceed!");
-      window.location.href = "main.html";
+      window.location.href = "index.html";
     });
   });
   
