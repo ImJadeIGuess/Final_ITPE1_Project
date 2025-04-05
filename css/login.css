@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0b132b, #1c2541, #2a2a72);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .login-container {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    animation: fadeInUp 1s ease forwards;
+    position: relative;
+  }
+  .login-title {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00ffea;
+  }
+  .input-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  .input-group label {
+    color: #fff;
+    margin-bottom: 5px;
+    display: block;
+  }
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  .input-group input:focus {
+    border-color: #00ffea;
+  }
+  .login-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #00ff15, #00ff9d);
+    color: #222;
+    cursor: pointer;
+    text-shadow: 1px 1px 2px #fff;
+    box-shadow: 0 0 15px #00ff9d, 0 0 25px #00ff15;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .login-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #00ff55, 0 0 35px #00ff00;
+  }
+  .signup-link {
+    color: #fff;
+    margin-top: 15px;
+    font-size: 0.9rem;
+  }
+  .signup-link a {
+    color: #00ffea;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .signup-link a:hover {
+    color: #00ff55;
+  }
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
