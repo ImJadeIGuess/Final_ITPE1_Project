@@ -66,10 +66,10 @@ function processPayment() {
 
 function cancelPayment() {
     localStorage.removeItem("cart"); 
-    window.location.href = "main.html"; 
+    window.location.href = "index.html"; 
 }
 document.getElementById("back-to-products").addEventListener("click", function () {
-  window.location.href = "main.html"; 
+  window.location.href = "index.html"; 
 });
 
   
