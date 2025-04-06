@@ -13,5 +13,5 @@ function toggleMusic() {
 }
 
 function goBack() {
-    window.location.href = 'main.html'; // Redirects to the main page
+    window.location.href = 'index.html'; // Redirects to the main page
 }
