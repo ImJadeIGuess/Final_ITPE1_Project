@@ -18,7 +18,7 @@ function toggleMusic() {
 
 
 function redirectToMain() {
-  window.location.href = "main.html";
+  window.location.href = "index.html";
 }
 
 
