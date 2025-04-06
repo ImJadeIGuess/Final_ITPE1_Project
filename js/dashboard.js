@@ -1,4 +1,4 @@
-function goBack() {   window.location.href = 'main.html';
+function goBack() {   window.location.href = 'index.html';
   }
   
 
